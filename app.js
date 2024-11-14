@@ -1,8 +1,7 @@
 const express = require('express');
+const jobRouter = require('./routes/jobRoutes');
 const app = express();
  
-app.get('/',(request, response)=>{
-    response.json({response: 'ur request hit the server , response from server '});
-});
+app.use('/', jobRouter);
 
 module.exports = app;
