@@ -3,10 +3,11 @@ const jobController = {
         try{
             const jobs =await job.find();
             response.status(200).json()
+            response.send('its working ');
              
 
         }catch(error){
-
+            response.status(500).json({message: error.message}) 
         }
     },
     getJobByID : async (request,response)=>{
