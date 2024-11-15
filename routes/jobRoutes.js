@@ -1,9 +1,8 @@
 const express = require('express');
-const jobRouter= express.Router();
+const jobController = require('../conrollers/jobController');
+const jobsRouter= express.Router();
 
-jobRouter.get('/',(request, response)=>{
-    response.json({response: 'ur request hit the server , response from server '});
-});
+jobsRouter.get('/',jobController.getAllJobs);
+jobsRouter.get('/:id',jobController.getJobBYID)
 
-
-module.exports = jobRouter;
+module.exports = jobsRouter;

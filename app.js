@@ -1,7 +1,7 @@
 const express = require('express');
-const jobRouter = require('./routes/jobRoutes');
+const jobsRouter = require('./routes/jobRoutes');
 const app = express();
  
-app.use('/', jobRouter);
+app.use('/api/v1/jobs', jobsRouter);
 
 module.exports = app;
