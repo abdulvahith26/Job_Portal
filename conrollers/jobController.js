@@ -2,6 +2,7 @@ const jobController = {
     getAllJobs : async (request,response)=>{
         try{
             const jobs =await job.find();
+            response.status(200).json()
              
 
         }catch(error){
@@ -22,7 +23,7 @@ const jobController = {
 
         }
     },
-    uodateJob : async (request,response)=>{
+    updateJob : async (request,response)=>{
         try{
 
         }catch(error){
